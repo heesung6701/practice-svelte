@@ -22,12 +22,13 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
   background: inherit;
+}
+
+main {
+  place-items: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #app {
-  max-width: 1280px;
+  min-width: 600px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -52,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 button {
   border-radius: 8px;
   border: 1px solid #353a4a;
-  padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -69,6 +69,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto #8ab4f8;
+}
+
+html, body, #app {
+  min-width: 600px;
 }
 
 @media (prefers-color-scheme: light) {

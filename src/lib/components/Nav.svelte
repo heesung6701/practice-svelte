@@ -10,9 +10,7 @@
     <div class="logo">
       <a href="#/">MyCompany</a>
     </div>
-    <button class="menu-toggle" on:click={toggleMenu} aria-label="메뉴 열기">
-      ☰
-    </button>
+    <div class="spacer"></div>
     <ul class:open={menuOpen}>
       <li><a href="#/">홈</a></li>
       <li><a href="#/about">회사소개</a></li>
@@ -22,6 +20,9 @@
       <li><a href="#/faq">FAQ</a></li>
       <li><a href="#/contact">문의</a></li>
     </ul>
+    <button class="menu-toggle" on:click={toggleMenu} aria-label="메뉴 열기">
+      ☰
+    </button>
   </div>
 </nav>
 
@@ -30,17 +31,23 @@
     background: #fff;
     border-bottom: 1px solid #eee;
     position: sticky;
-    top: 0;
     z-index: 100;
+    white-space: nowrap;
+    overflow-x: auto;
+    min-width: 360px;
   }
   .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 60px;
+    white-space: nowrap;
+    min-width: 360px;
+  }
+  .logo {
+    flex: 0 0 auto;
   }
   .logo a {
     font-size: 1.5rem;
@@ -57,6 +64,7 @@
     padding: 0;
     align-items: center;
     transition: max-height 0.3s;
+    margin-left: auto;
   }
   ul li a {
     color: #213547;
@@ -78,6 +86,16 @@
     font-size: 2rem;
     cursor: pointer;
     color: #213547;
+    padding: 0.6em 0em;
+  }
+  .spacer {
+    flex: 1;
+    min-width: 30px;
+  }
+  .logo a, ul li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* 반응형 (모바일) */
@@ -97,6 +115,7 @@
       max-height: 0;
       overflow: hidden;
       border-bottom: 1px solid #eee;
+      margin-left: 0;
     }
     ul.open {
       max-height: 400px;
