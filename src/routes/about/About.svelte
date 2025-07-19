@@ -46,19 +46,22 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background: rgba(255,255,255,0.03);
+  background: rgba(36,36,48,0.92);
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  color: #e3e6ed;
 }
 .card {
   margin-bottom: 2rem;
-  background: rgba(255,255,255,0.08);
+  background: rgba(36,36,48,0.92);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  color: #e3e6ed;
 }
-.company-summary ul {
-  list-style: none;
-  padding: 0;
+.company-summary ul,
+.history-list,
+.team-section .team-list {
+  color: #cfd8e3;
 }
 .company-summary li {
   margin-bottom: 0.5rem;
@@ -87,7 +90,7 @@
   background: #fff;
 }
 .role {
-  color: #646cff;
+  color: #8ab4f8;
   font-size: 0.95em;
   margin-left: 0.5em;
 }
@@ -104,6 +107,14 @@
 .badge {
   margin-left: 0.5em;
   font-size: 1.2em;
+  color: #ffd600;
+}
+.about-container a {
+  color: #8ab4f8;
+  text-decoration: underline;
+}
+h1, h2 {
+  color: #e3e6ed;
 }
 @media (max-width: 600px) {
   .about-container {
@@ -112,6 +123,58 @@
   .team-section .team-list {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .about-container {
+    background: #fff;
+    color: #213547;
+    box-shadow: 0 4px 24px rgba(100,108,255,0.06);
+  }
+  .card {
+    background: #fff;
+    color: #213547;
+    box-shadow: 0 2px 8px rgba(100,108,255,0.06);
+  }
+  .company-summary ul,
+  .history-list,
+  .team-section .team-list {
+    color: #222;
+  }
+  .role {
+    color: #646cff;
+  }
+  .about-container a {
+    color: #646cff;
+  }
+  h1, h2 {
+    color: #213547;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .about-container {
+    background: rgba(36,36,48,0.92);
+    color: #e3e6ed;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  }
+  .card {
+    background: rgba(36,36,48,0.92);
+    color: #e3e6ed;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+  .company-summary ul,
+  .history-list,
+  .team-section .team-list {
+    color: #cfd8e3;
+  }
+  .role {
+    color: #8ab4f8;
+  }
+  .about-container a {
+    color: #8ab4f8;
+  }
+  h1, h2 {
+    color: #e3e6ed;
   }
 }
 </style>

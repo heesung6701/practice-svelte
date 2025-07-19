@@ -120,9 +120,10 @@
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
-  background: rgba(255,255,255,0.03);
+  background: rgba(36,36,48,0.92);
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  color: #e3e6ed;
 }
 .portfolio-nav {
   display: flex;
@@ -157,9 +158,10 @@
   justify-content: flex-start;
 }
 .portfolio-card {
-  background: rgba(255,255,255,0.08);
+  background: rgba(36,36,48,0.92);
+  color: #e3e6ed;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   width: 280px;
   cursor: pointer;
   overflow: hidden;
@@ -181,13 +183,13 @@
   padding: 1rem;
 }
 .card-content h2 {
+  color: #8ab4f8;
   margin: 0 0 0.5em 0;
   font-size: 1.2em;
-  color: #646cff;
 }
 .card-content p {
   margin: 0;
-  color: #333;
+  color: #cfd8e3;
   font-size: 1em;
 }
 /* 모달 스타일 */
@@ -201,8 +203,8 @@
   position: fixed;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
-  color: #222;
+  background: #23263a;
+  color: #e3e6ed;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   padding: 2rem 2.5rem 1.5rem 2.5rem;
@@ -220,7 +222,7 @@
   background: none;
   border: none;
   font-size: 2em;
-  color: #646cff;
+  color: #8ab4f8;
   cursor: pointer;
 }
 .modal-img {
@@ -239,6 +241,12 @@
   margin-bottom: 0.7em;
   font-size: 1.05em;
 }
+.modal-info em {
+  color: #ffd600;
+}
+h1 {
+  color: #e3e6ed;
+}
 @media (max-width: 900px) {
   .portfolio-list {
     justify-content: center;
@@ -255,6 +263,68 @@
   }
   .modal {
     padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .portfolio-container {
+    background: #fff;
+    color: #213547;
+    box-shadow: 0 4px 24px rgba(100,108,255,0.06);
+  }
+  .portfolio-card {
+    background: #fff;
+    color: #213547;
+    box-shadow: 0 2px 8px rgba(100,108,255,0.06);
+  }
+  .card-content h2 {
+    color: #646cff;
+  }
+  .card-content p, .modal-info li {
+    color: #222;
+  }
+  .modal {
+    background: #fff;
+    color: #213547;
+  }
+  .close-btn {
+    color: #646cff;
+  }
+  .modal-info em {
+    color: #ffd600;
+  }
+  h1 {
+    color: #213547;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .portfolio-container {
+    background: rgba(36,36,48,0.92);
+    color: #e3e6ed;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  }
+  .portfolio-card {
+    background: rgba(36,36,48,0.92);
+    color: #e3e6ed;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+  .card-content h2 {
+    color: #8ab4f8;
+  }
+  .card-content p, .modal-info li {
+    color: #cfd8e3;
+  }
+  .modal {
+    background: #23263a;
+    color: #e3e6ed;
+  }
+  .close-btn {
+    color: #8ab4f8;
+  }
+  .modal-info em {
+    color: #ffd600;
+  }
+  h1 {
+    color: #e3e6ed;
   }
 }
 </style>

@@ -55,9 +55,10 @@
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background: rgba(255,255,255,0.03);
+  background: rgba(36,36,48,0.92);
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  color: #e3e6ed;
 }
 .service-list {
   display: flex;
@@ -68,14 +69,15 @@
 .service-card {
   flex: 1 1 260px;
   min-width: 260px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(36,36,48,0.92);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   padding: 1.5rem 1.2rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: #e3e6ed;
 }
 .service-header {
   display: flex;
@@ -83,12 +85,14 @@
   gap: 0.7em;
   margin-bottom: 0.5em;
 }
+.service-header h2 {
+  color: #8ab4f8;
+}
 .service-icon {
   font-size: 2.2em;
 }
-.service-desc {
-  margin: 0.5em 0 1em 0;
-  font-size: 1.08em;
+.service-desc, .service-process {
+  color: #cfd8e3;
 }
 .service-process {
   margin: 0;
@@ -103,8 +107,8 @@
   display: inline-block;
   margin-top: 0.7em;
   padding: 0.7em 2em;
-  background: #646cff;
-  color: #fff;
+  background: #8ab4f8;
+  color: #181a20;
   border-radius: 8px;
   font-size: 1.1em;
   font-weight: 600;
@@ -112,7 +116,11 @@
   transition: background 0.2s;
 }
 .cta-btn:hover {
-  background: #535bf2;
+  background: #a3c9fa;
+  color: #181a20;
+}
+h1 {
+  color: #e3e6ed;
 }
 @media (max-width: 800px) {
   .service-list {
@@ -121,6 +129,64 @@
   }
   .service-card {
     min-width: 0;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .services-container {
+    background: #fff;
+    color: #213547;
+    box-shadow: 0 4px 24px rgba(100,108,255,0.06);
+  }
+  .service-card {
+    background: #fff;
+    color: #213547;
+    box-shadow: 0 2px 8px rgba(100,108,255,0.06);
+  }
+  .service-header h2 {
+    color: #646cff;
+  }
+  .service-desc, .service-process {
+    color: #222;
+  }
+  .cta-btn {
+    background: #646cff;
+    color: #fff;
+  }
+  .cta-btn:hover {
+    background: #747bff;
+    color: #fff;
+  }
+  h1 {
+    color: #213547;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .services-container {
+    background: rgba(36,36,48,0.92);
+    color: #e3e6ed;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  }
+  .service-card {
+    background: rgba(36,36,48,0.92);
+    color: #e3e6ed;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+  .service-header h2 {
+    color: #8ab4f8;
+  }
+  .service-desc, .service-process {
+    color: #cfd8e3;
+  }
+  .cta-btn {
+    background: #8ab4f8;
+    color: #181a20;
+  }
+  .cta-btn:hover {
+    background: #a3c9fa;
+    color: #181a20;
+  }
+  h1 {
+    color: #e3e6ed;
   }
 }
 </style>

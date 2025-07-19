@@ -45,9 +45,10 @@
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background: rgba(255,255,255,0.03);
+  background: rgba(36,36,48,0.92);
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  color: #e3e6ed;
 }
 .faq-list {
   margin-top: 2rem;
@@ -57,9 +58,9 @@
 }
 .faq-question {
   width: 100%;
-  background: #f3f3ff;
-  color: #646cff;
-  border: none;
+  background: #23263a;
+  color: #e3e6ed;
+  border: 1px solid #353a4a;
   border-radius: 8px;
   padding: 1em 1.2em;
   font-size: 1.08em;
@@ -72,26 +73,84 @@
   transition: background 0.2s, color 0.2s;
 }
 .faq-question[aria-expanded="true"] {
-  background: #646cff;
-  color: #fff;
+  background: #8ab4f8;
+  color: #181a20;
 }
 .arrow {
   font-size: 1.1em;
   margin-left: 1em;
+  color: #8ab4f8;
 }
 .faq-answer {
-  background: #fff;
-  color: #222;
+  background: #23263a;
+  color: #cfd8e3;
   border-radius: 0 0 8px 8px;
   padding: 1.1em 1.2em;
   font-size: 1em;
   margin-top: -0.2em;
-  box-shadow: 0 2px 8px rgba(100,108,255,0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   animation: fadeIn 0.2s;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+h1 {
+  color: #e3e6ed;
+}
+@media (prefers-color-scheme: light) {
+  .faq-container {
+    background: #fff;
+    color: #213547;
+    box-shadow: 0 4px 24px rgba(100,108,255,0.06);
+  }
+  .faq-question {
+    background: #f3f3ff;
+    color: #646cff;
+    border: 1px solid #e0e7ff;
+  }
+  .faq-question[aria-expanded="true"] {
+    background: #646cff;
+    color: #fff;
+  }
+  .arrow {
+    color: #646cff;
+  }
+  .faq-answer {
+    background: #fff;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(100,108,255,0.06);
+  }
+  h1 {
+    color: #213547;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .faq-container {
+    background: rgba(36,36,48,0.92);
+    color: #e3e6ed;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  }
+  .faq-question {
+    background: #23263a;
+    color: #e3e6ed;
+    border: 1px solid #353a4a;
+  }
+  .faq-question[aria-expanded="true"] {
+    background: #8ab4f8;
+    color: #181a20;
+  }
+  .arrow {
+    color: #8ab4f8;
+  }
+  .faq-answer {
+    background: #23263a;
+    color: #cfd8e3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+  h1 {
+    color: #e3e6ed;
+  }
 }
 @media (max-width: 600px) {
   .faq-container {

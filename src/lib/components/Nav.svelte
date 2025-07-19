@@ -109,4 +109,37 @@
       display: block;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    .navbar {
+      background: #23263a;
+      border-bottom: 1px solid #23263a;
+    }
+    .logo a {
+      color: #e3e6ed;
+    }
+    ul {
+      background: #23263a;
+    }
+    ul li a {
+      color: #e3e6ed;
+    }
+    ul li a:hover,
+    ul li a:focus {
+      background: #353a4a;
+      color: #8ab4f8;
+    }
+    .menu-toggle {
+      color: #e3e6ed;
+    }
+    @media (max-width: 768px) {
+      ul {
+        background: #23263a;
+        border-bottom: 1px solid #353a4a;
+      }
+      ul li {
+        border-bottom: 1px solid #353a4a;
+      }
+    }
+  }
 </style>

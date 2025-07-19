@@ -66,21 +66,6 @@
     </div>
   </section>
   
-  <footer class="main-footer">
-    <div class="contact">
-      <span>문의: contact@company.com | 02-1234-5678</span>
-    </div>
-    <div class="sns">
-      <a href="#" aria-label="Instagram">📷</a>
-      <a href="#" aria-label="Facebook">📘</a>
-      <a href="#" aria-label="Twitter">🐦</a>
-    </div>
-    <div class="links">
-      <a href="#/policy/privacy">개인정보처리방침</a> | 
-      <a href="#/policy/terms">이용약관</a>
-    </div>
-  </footer>
-  
   <style>
   .hero {
     position: relative;
@@ -260,6 +245,68 @@
     .service-list, .portfolio-list, .testimonial-list {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .hero {
+      background: linear-gradient(120deg, #23263a 0%, #181a20 100%);
+    }
+    .hero h1 {
+      color: #e3e6ed;
+    }
+    .hero p {
+      color: #cfd8e3;
+    }
+    .cta {
+      background: #8ab4f8;
+      color: #181a20;
+    }
+    .cta:hover {
+      background: #a3c9fa;
+      color: #181a20;
+    }
+    .services {
+      background: #23263a;
+      color: #e3e6ed;
+    }
+    .service-card {
+      background: rgba(36,36,48,0.92);
+      color: #e3e6ed;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .service-card .desc {
+      color: #cfd8e3;
+    }
+    .portfolio-preview {
+      background: #181a20;
+      color: #e3e6ed;
+    }
+    .portfolio-card {
+      background: rgba(36,36,48,0.92);
+      color: #e3e6ed;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .ptitle {
+      color: #8ab4f8;
+    }
+    .more-btn {
+      color: #8ab4f8;
+    }
+    .testimonials {
+      background: #23263a;
+      color: #e3e6ed;
+    }
+    .testimonial-card {
+      background: rgba(36,36,48,0.92);
+      color: #e3e6ed;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .comment {
+      color: #cfd8e3;
+    }
+    .name {
+      color: #a3c9fa;
     }
   }
   </style>
