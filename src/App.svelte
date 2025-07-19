@@ -13,7 +13,7 @@
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
-  <h1>Svelte Practice</h1>
+  <h1>Svelte Practice (+github action deploy)</h1>
 
   <div class="card">
     <Counter />
